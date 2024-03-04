@@ -14,10 +14,13 @@ For that end, the structure of an OLAP approach/system was followed. This is to 
 
 More instructions and details about these pipelines, processes, resources, tools utilized and project reproducibility can be found within the sections that follow from here.
 
-### Cloud
+<br>
 
-The project has been developed in the cloud using Google Cloud Platform as a sole resource/service provider, and these resources have been provisioned, managed and deployed via Terraform as Infrastructure as Code tool.
+### Cloud usage
 
+The project has been developed in the cloud using Google Cloud Platform as a sole resource/service provider, and these **resources have been provisioned, managed and deployed** via **Terraform as Infrastructure as Code tool**.
+
+<br>
 
 ### Data ingestion 
 
@@ -26,7 +29,7 @@ The project has been developed in the cloud using Google Cloud Platform as a sol
 
 The data ingestion was characterized to be of a batch workflow orchestration with Mage, all developed and deployed using Google Run after initializing and enabling/applying Terraform as IaC
 
-This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in the directory ____ of [this repo]().
+This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/tree/main/capstone%20project/workflow%20orchestration)
 
 The ingestion of the first batch pipeline begun loading the dataset from a raw CSV file hosted on GitHub, and finalized by exporting/staging the dataset into a GCS Bucket. It is important to notice that we technically didn't have to load from any API as we didn't make any GET request to any API endpoint.
 
@@ -36,6 +39,7 @@ You will note that in each of these pipelines, there were Transformation blocks,
 
 Please note that it would have been more efficient to execute all the transformation before staging the data in the data lake/storage, this is to say, within the 1st batch pipeline. 
 
+<br>
 
 ### Data warehouse
 
@@ -63,43 +67,42 @@ SELECT
 FROM
   `data-eng-zoomcamp-cohort24.sleep_health_dataset.data_table`;
 ```
-
+<br>
 
 ### Transformations utilizing Mage
 
-One (1) transformation block exist in each of the two pipelines created. All these transformations were executed utilizing Pandas and Numpy libraries, and these were distributed as follows:
+We can see that transformation blocks exist in each of the two pipelines created. All these transformations were executed utilizing Pandas and Numpy libraries, and these were distributed as follows:
 
-First batch pipeline
+- First batch pipeline
 
-- unifying classes in the `weight` category
-- creation of two different categories for `systolic` and `diastolic pressure` 
-- deletion of the unified `blood pressure` category
+  - unifying classes in the `weight` category
+  - creation of two different categories for `systolic` and `diastolic pressure` 
+  - deletion of the unified `blood pressure` category
 
-Second batch pipeline
+- Second batch pipeline
 
-- parsing all the letters of the categories as lowercase
-- dropped the category `blood_pressure` which contains 2 two values separated by a slash
+  - parsing all the letters of the categories as lowercase
+  - dropped the category `blood_pressure` which contains 2 two values separated by a slash
 
+<br>
 
 ### Dashboard
 
 The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GCP link]()
 
 
-(screenshot of dashboard)
-
-
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/2-tile-dashboard.png"  width="88%" height="88%">
 
 We found that amongst the small sample of the population, `Nurses, Teaches, Sales person and Scientist` are the occupations that tend to have some kind of sleeping disorder. 
 
 Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. Having done some EDA prior to executing and documenting this project would have helped notice and tackle this issue.
 
+<br>
 
 ### Reproducibility
 
-I tried to give concise instruction on how I developed and deployed this project. I also provide some instructions on how to develop and execute the same process locally.
-
-Here are the instructions:
+I tried to provide concise instructions on how I developed and deployed this project. If you're encountering any trouble while reproducing this project, feel free to ping me and tell me about it:
 
 #### Creating GCS Bucket:
 
@@ -137,14 +140,16 @@ Once we've passed all the values, we can run the following commands in our bash 
 
 There is no auto-confirmation in Terraform when scripting by CLI, so we will need to type `yes` when applying changes:
 
-
-(terraform-applied-png)
-
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
 
 And so our bucket `sleep-health-de-bucket` was created:
 
-(bucket-png)
 
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
+
+<br>
 
 #### Transformation stage 
 
@@ -152,67 +157,74 @@ Next we are to orchestrate an end-to-end-pipeline from our public repository to 
 
 We clone 
 
-```git clone https://github.com/mage-ai/mage-ai-terraform-templates.git```
+      git clone https://github.com/mage-ai/mage-ai-terraform-templates.git
 
 After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will add our credentials the same way we did when creating our bucket with Terraform. The ones used fot this project are located within this folder [____]()
 
-We also have to enable Cloud Filestore API
+We also have to configure and enable Cloud Filestore API
 
 Once all this is done, we are ready to run in our bash terminal:
 
-```terraform init```
+      terraform init
 
-```terraform apply```
+      terraform apply
 
+
+
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
 When going to Google Run, we see a new service :
 
 
-(Cloud Run screenshot)
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
 
 Before opening the URL of this instance in our local machine, it's safer to whitelist our IP so that we can restrict the access to these service.
 
-Now we're ready too access Mage UI via these 
+<p align="center">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/mage/running-in-vm.png"  width="88%" height="88%">
+
+Now we're ready to build and develop our pipelines in this virtual environment.
 
 As said in the introductory section of this markdown file, for demonstration purposes, you will note that two pipelines have been created to perform different transformations.
 
-The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory]()
+The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-project/tree/main/capstone%20project/workflow%20orchestration)
 
 These are some of the screenshots as a sample of Mage GUI:
 
 (Mage screenshots)
 
-  ### Alternative (local) method proposed: 
+<br>
+
+  #### Alternative (local) method proposed: 
 
   If preferred, instead of running and deploying from within the cloud, you can also run Mage locally following this steps:
 
   clone the repo from Mage github:
 
-  ```git clone https://github.com/mage-ai/mage-zoomcamp.git mage-zoomcamp```
+      git clone https://github.com/mage-ai/mage-zoomcamp.git mage-zoomcamp
 
   After cd-ing into mage-zoomcamp directory, we copy `dev.env` file into `.env` file so that we can name it in our gitignore file:
 
-  ```cp dev.env .env```
-
-  
+        cp dev.env .env
 
   Then we build and start the container with the following commands, respectively:
 
-  ```docker compose build```
+        docker compose build
 
-  ```docker compose up```
-
-
+        docker compose up
   In case we get a notification that there's a latest version of the `mageai` image, we just need to run 
 
-  ```docker pull mageai/mageai:latest```
+        docker pull mageai/mageai:latest
 
   In any case, it is always advisable to run docker scout to analyze the images we're about to compose up:
 
-  ```docker scout view```
+        docker scout view
 
   Opening our localhost:6789 should take you to the main Mage UI. The rest of the block creation and configuration is the same as the process we have just described in our virtual instance. The main difference would be that the pipelines would be developed and run locally, instead of using a VM.
 
+<br>
 
 #### Bigquery
 
@@ -239,12 +251,11 @@ FROM
   `data-eng-zoomcamp-cohort24.sleep_health_dataset.data_table`;
 ```
 
+<br>
+
 #### LookerStudio
 
-Once we have imported these tables into LookerStudio, we will build and adjust all the dashboard using LookerStudio GUI. The brief result was the following :
-
-```link to public lookerstudio```
-
+Once we have imported these tables into LookerStudio, we will build and adjust all the dashboard using LookerStudio GUI. The brief result was presented in the section [Dashboard](#dashboard).
 
 
 
