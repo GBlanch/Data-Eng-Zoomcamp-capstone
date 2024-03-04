@@ -172,18 +172,18 @@ Once all this is done, we are ready to run in our bash terminal:
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
 When going to Google Run, we see a new service :
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
 
 Before opening the URL of this instance in our local machine, it's safer to whitelist our IP so that we can restrict the access to these service.
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/mage/running-in-vm.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-capstone/blob/main/assets/mage/running-in-vm.png"  width="88%" height="88%">
 
 Now we're ready to build and develop our pipelines in this virtual environment.
 
