@@ -141,13 +141,13 @@ Once we've passed all the values, we can run the following commands in our bash 
 There is no auto-confirmation in Terraform when scripting by CLI, so we will need to type `yes` when applying changes:
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
 
 And so our bucket `sleep-health-de-bucket` was created:
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
 
 <br>
 
@@ -172,24 +172,24 @@ Once all this is done, we are ready to run in our bash terminal:
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
 When going to Google Run, we see a new service :
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
 
 Before opening the URL of this instance in our local machine, it's safer to whitelist our IP so that we can restrict the access to these service.
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/mage/running-in-vm.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/mage/running-in-vm.png"  width="88%" height="88%">
 
 Now we're ready to build and develop our pipelines in this virtual environment.
 
 As said in the introductory section of this markdown file, for demonstration purposes, you will note that two pipelines have been created to perform different transformations.
 
-The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-project/tree/main/capstone%20project/workflow%20orchestration)
+The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-project/tree/main/workflow%20orchestration)
 
 These are some of the screenshots as a sample of Mage GUI:
 
