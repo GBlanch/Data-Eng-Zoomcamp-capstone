@@ -92,7 +92,7 @@ The dashboard was done using Looker Studio, an it was elaborated rather briefly 
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/capstone%20project/assets/2-tile-dashboard.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/blob/main/assets/2-tile-dashboard.png"  width="88%" height="88%">
 
 We found that amongst the small sample of the population, `Nurses, Teaches, Sales person and Scientist` are the occupations that tend to have some kind of sleeping disorder. 
 
@@ -147,7 +147,7 @@ And so our bucket `sleep-health-de-bucket` was created:
 
 
 <p align="center">
-<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
+<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket-2.png"  width="88%" height="88%">
 
 <br>
 
