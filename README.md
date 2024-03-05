@@ -138,7 +138,7 @@ I tried to provide concise instructions on how I developed and deployed this pro
 
 #### Creating GCS Bucket
 
-In 'IAM & Admin' section on GCP, we first create a Service Account. Then we grant permissions / roles to administer BigQuery, Storage and Compute Engine resources with this Service Account.
+In `IAM & Admin` section on GCP, we first create a Service Account. Then we grant permissions / roles to administer BigQuery, Storage and Compute Engine resources with this Service Account.
 
 Next we create a new key in json type. Once we've downloaded the json file with it, copy and paste its content into a json file, and store it in a directory inside your main project's Terraform folder. N.b: Make sure to add this folder into your `.gitignore` amongst other files with sensitive information.
 
@@ -332,7 +332,7 @@ This is a sample of how the GUI of Mage looks like:
 
 #### Bigquery
 
-Once our dataset is loaded into BigQuery, we can create the tables we want to use in LookerStudio later on. As mentioned in [section__](), these were build by running the following queries:
+Once our dataset is loaded into BigQuery, we can create the tables we want to use in LookerStudio later on. As mentioned in [section__](), these were build by running these `DDL statements` :
 
 ```
 CREATE TABLE IF NOT EXISTS `data-eng-zoomcamp-cohort24.sleep_health_dataset.stress_sleeping`
