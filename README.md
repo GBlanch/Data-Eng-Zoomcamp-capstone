@@ -1,12 +1,11 @@
-# DTC-Data-Eng.-zoomcamp-project
+# DTC-Data-Eng-zoomcamp-capstone
 
 work in progress
 
 <br>
 
 ## Table of Contents
-
-- [DTC-Data-Eng.-zoomcamp-project](#dtc-data-eng-zoomcamp-project)
+- [DTC-Data-Eng-zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
   - [Table of Contents](#table-of-contents)
     - [Problem description](#problem-description)
     - [Cloud usage](#cloud-usage)
@@ -168,7 +167,7 @@ And so our bucket `sleep-health-de-bucket` was created:
 
 <br>
 
-#### <ins>Transformation stage</ins>
+#### Transformation stage
 
 Next we are to orchestrate an end-to-end-pipeline from our public repository to Google BigQuery Warehouse. For this, we will use Terraform as IaC to spin up an instance and develop all our blocks there.
 
