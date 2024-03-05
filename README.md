@@ -29,7 +29,7 @@ The project has been developed in the cloud using Google Cloud Platform as a sol
 
 The data ingestion was characterized to be of a batch workflow orchestration with Mage, all developed and deployed using Google Run after initializing and enabling/applying Terraform as IaC
 
-This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/DTC-Data-Eng-zoomcamp-capstone/tree/main/capstone%20project/workflow%20orchestration)
+This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/workflow%20orchestration)
 
 The ingestion of the first batch pipeline begun loading the dataset from a raw CSV file hosted on GitHub, and finalized by exporting/staging the dataset into a GCS Bucket. It is important to notice that we technically didn't have to load from any API as we didn't make any GET request to any API endpoint.
 
