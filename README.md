@@ -26,7 +26,8 @@ work in progress
 
 ### Foreword
 
-Fot that reason, I created a final section [Improvement Notes](#improvement-notes) where I briefly summarize
+To the peer reviewer, I tried to structure this markdown so that evaluating could be found more handy.
+You probably have seen two new sections: this one -`Foreword`- and `Improvement notes`. The former one is self-explanatory I believe. Regarding the latter one, I created it so that I briefly summarize what I would have liked to do better had I invested more time, energy and resources - I guess this last attribute it's a combinations of the first two- on this project.
 
 ### Problem description
 
@@ -374,4 +375,6 @@ If more time had been allotted to design, execute and document this project -and
 - After performing EDA, aim to solve more intricate matters and so posing better questions  
 - Have more usage within the Data Warehouse so as to solve this new questions
 - Finally, elaborate a much more complete dashboard, and to my preference, utilize Tableau Public
+
+[Back to Table of Contents](#table-of-contents)
 
