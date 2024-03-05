@@ -73,13 +73,13 @@ FROM
 
 We can see that transformation blocks exist in each of the two pipelines created. All these transformations were executed utilizing Pandas and Numpy libraries, and these were distributed as follows:
 
-- First batch pipeline
+- First batch pipeline: from API to GCS bucket
 
   - unifying classes in the `weight` category
   - creation of two different categories for `systolic` and `diastolic pressure` 
   - deletion of the unified `blood pressure` category
 
-- Second batch pipeline
+- Second batch pipeline: from GCS bucket to BigQuery
 
   - parsing all the letters of the categories as lowercase
   - dropped the category `blood_pressure` which contains 2 two values separated by a slash
@@ -88,7 +88,7 @@ We can see that transformation blocks exist in each of the two pipelines created
 
 ### Dashboard
 
-The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GCP link]()
+The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GCP link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
 
 
 <p align="center">
@@ -174,7 +174,7 @@ Once all this is done, we are ready to run in our bash terminal:
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
-When going to Google Run, we see a new service :
+When going to Google Run, we see a new service running :
 
 
 <p align="center">
@@ -191,9 +191,55 @@ As said in the introductory section of this markdown file, for demonstration pur
 
 The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/workflow%20orchestration)
 
-These are some of the screenshots as a sample of Mage GUI:
+This is a sample of how the GUI of Mage looks like:
 
-(Mage screenshots)
+<p align="center">
+<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/mage/mage-load.png"  width="88%" height="88%">
+
+First transformation (API to GCS bucket batch pipeline)
+
+python```
+if 'transformer' not in globals():
+    from mage_ai.data_preparation.decorators import transformer
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
+
+import numpy as np
+import pandas as pd
+
+@transformer
+def transform(data, *args, **kwargs):
+
+    # To make data handling less cumbersome, replace spaces with underscores
+    data.columns = [spaces.replace(' ', '_') for spaces in data.columns] 
+
+    # Unify 'Normal' and 'Normal weight' weight
+    data["BMI_Category"] = data["BMI_Category"]\
+                           .apply(lambda x: x.replace("Normal Weight",
+                                                      "Normal"))
+    # impute NaNs
+    data = data.replace(np.nan, 'None',
+                         regex = True)
+
+
+    data[['Systolic_BP', 'Diastolic_BP']] = data["Blood_Pressure"]\
+                                          .apply(lambda x: pd.Series(str(x)\
+                                                                    .split("/")))
+
+    return data
+
+
+@test
+def test_output(output, *args):
+    """
+    Template code for testing the output of the block.
+    """
+    assert output.isnull()\
+                 .sum().any() == False, 'NaNs still exist in the dataframe'
+```
+
+
+Second transformation (GCS bucket to BigQuery batch pipeline)
 
 <br>
 
