@@ -11,7 +11,7 @@ work in progress
     - [Problem description](#problem-description)
     - [Cloud usage](#cloud-usage)
     - [Data ingestion](#data-ingestion)
-    - [Data warehouse](#data-warehouse)
+    - [Data warehouse within BigQuery](#data-warehouse-within-bigquery)
     - [Transformations utilizing Mage](#transformations-utilizing-mage)
     - [Dashboard](#dashboard)
     - [Reproducibility](#reproducibility)
@@ -44,7 +44,7 @@ The project has been developed in the cloud using Google Cloud Platform as a sol
 
 [Dataset:](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset?select=Sleep_health_and_lifestyle_dataset.csv)
 
-The data ingestion was characterized to be of a batch workflow orchestration with Mage, all developed and deployed using Google Run after initializing and enabling/applying Terraform as IaC
+The data ingestion was characterized to be of a batch workflow orchestration with Mage, all developed and deployed using Google Run after initializing and enabling/applying Terraform as IaC.
 
 This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/workflow%20orchestration)
 
@@ -60,7 +60,7 @@ Please note that it would have been more efficient to execute all the transforma
 
 <br>
 
-### Data warehouse
+### Data warehouse within BigQuery
 
 Tables were created into BigQuery without any need to partition or cluster data due to the nature of the dataset.
 
@@ -112,7 +112,7 @@ We can see that transformation blocks exist in each of the two pipelines created
 
 ### Dashboard
 
-The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GCP link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
+The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GLS link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
 
 
 <p align="center">
@@ -120,7 +120,7 @@ The dashboard was done using Looker Studio, an it was elaborated rather briefly 
 
 We found that amongst the small sample of the population, `Nurses, Teaches, Sales person and Scientist` are the occupations that tend to have some kind of sleeping disorder. 
 
-Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. If performing an EDA was in the scope of this project, we would have noticed and tackled this issue prior to executing and documenting it.
+Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. If performing an EDA had been within the scope of this project, we would have noticed and tackled this issue prior to executing and documenting it.
 
 [Back to Table of Contents](#table-of-contents)
 
