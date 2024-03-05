@@ -196,50 +196,68 @@ This is a sample of how the GUI of Mage looks like:
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/mage/mage-load.png"  width="88%" height="88%">
 
-First transformation (API to GCS bucket batch pipeline)
+- First transformation (API to GCS bucket batch pipeline)
 
-python```
-if 'transformer' not in globals():
-    from mage_ai.data_preparation.decorators import transformer
-if 'test' not in globals():
-    from mage_ai.data_preparation.decorators import test
+    ```python
+    if 'transformer' not in globals():
+        from mage_ai.data_preparation.decorators import transformer
+    if 'test' not in globals():
+        from mage_ai.data_preparation.decorators import test
 
-import numpy as np
-import pandas as pd
+    import numpy as np
+    import pandas as pd
 
-@transformer
-def transform(data, *args, **kwargs):
+    @transformer
+    def transform(data, *args, **kwargs):
 
-    # To make data handling less cumbersome, replace spaces with underscores
-    data.columns = [spaces.replace(' ', '_') for spaces in data.columns] 
+        # To make data handling less cumbersome, replace spaces with underscores
+        data.columns = [spaces.replace(' ', '_') for spaces in data.columns] 
 
-    # Unify 'Normal' and 'Normal weight' weight
-    data["BMI_Category"] = data["BMI_Category"]\
-                           .apply(lambda x: x.replace("Normal Weight",
-                                                      "Normal"))
-    # impute NaNs
-    data = data.replace(np.nan, 'None',
-                         regex = True)
-
-
-    data[['Systolic_BP', 'Diastolic_BP']] = data["Blood_Pressure"]\
-                                          .apply(lambda x: pd.Series(str(x)\
-                                                                    .split("/")))
-
-    return data
+        # Unify 'Normal' and 'Normal weight' weight
+        data["BMI_Category"] = data["BMI_Category"]\
+                              .apply(lambda x: x.replace("Normal Weight",
+                                                          "Normal"))
+        # impute NaNs
+        data = data.replace(np.nan, 'None',
+                            regex = True)
 
 
-@test
-def test_output(output, *args):
-    """
-    Template code for testing the output of the block.
-    """
-    assert output.isnull()\
-                 .sum().any() == False, 'NaNs still exist in the dataframe'
-```
+        data[['Systolic_BP', 'Diastolic_BP']] = data["Blood_Pressure"]\
+                                              .apply(lambda x: pd.Series(str(x)\
+                                                                        .split("/")))
+
+        return data
 
 
-Second transformation (GCS bucket to BigQuery batch pipeline)
+    @test
+    def test_output(output, *args):
+        """
+        Template code for testing the output of the block.
+        """
+        assert output.isnull()\
+                    .sum().any() == False, 'NaNs still exist in the dataframe'
+    ```
+
+
+- Second transformation (GCS bucket to BigQuery batch pipeline):
+  
+    ```python
+    if 'transformer' not in globals():
+        from mage_ai.data_preparation.decorators import transformer
+    if 'test' not in globals():
+        from mage_ai.data_preparation.decorators import test
+
+
+    @transformer
+    def transform(data, *args, **kwargs):
+
+        data.columns = data.columns.str.lower()
+        data.drop('blood_pressure',
+                  axis = 1,
+                  inplace = True)
+
+        return data
+    ```
 
 <br>
 
