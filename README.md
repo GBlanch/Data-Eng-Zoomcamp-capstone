@@ -57,7 +57,6 @@ You will note that in each of these pipelines, there were Transformation blocks,
 Please note that it would have been more efficient to execute all the transformation before staging the data in the data lake/storage, this is to say, within the 1st batch pipeline. 
 
 [Back to Table of Contents](#table-of-contents)
-
 <br>
 
 ### Data warehouse
