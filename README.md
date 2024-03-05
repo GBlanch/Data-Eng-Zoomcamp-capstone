@@ -26,8 +26,9 @@ work in progress
 
 ### Foreword
 
-To the peer reviewer, I tried to structure this markdown so that evaluating could be found more handy.
-You probably have seen two new sections: this one -`Foreword`- and `Improvement notes`. The former one is self-explanatory I believe. Regarding the latter one, I created it so that I briefly summarize what I would have liked to do better had I invested more time, energy and resources - I guess this last attribute it's a combinations of the first two- on this project.
+To the peer reviewer, I tried to structure this markdown so that evaluating could be found more handy if following the evaluation criteria found in [this markdown file](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/projects/README.md) located in the cohort directory of the main branch of the DTC default repo.
+
+You probably have seen two new sections: this one -`Foreword`- and `Improvement notes`. The former one is self-explanatory I believe. Regarding the latter one, I created it to briefly summarize some of the many things, aspects and details that I would have liked to do better had I invested more time, energy and resources - I guess this last attribute it's a combination of the first two- on this project.
 
 ### Problem description
 
