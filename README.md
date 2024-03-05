@@ -8,6 +8,7 @@ work in progress
 
 - [DTC-Data-Eng-zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
   - [Table of Contents](#table-of-contents)
+    - [Foreword](#foreword)
     - [Problem description](#problem-description)
     - [Cloud usage](#cloud-usage)
     - [Data ingestion](#data-ingestion)
@@ -20,8 +21,12 @@ work in progress
       - [Alternative (local) method proposed:](#alternative-local-method-proposed)
       - [Bigquery](#bigquery)
       - [LookerStudio](#lookerstudio)
+    - [Improvement Notes](#improvement-notes)
 
 
+### Foreword
+
+Fot that reason, I created a final section [Improvement Notes](#improvement-notes) where I briefly summarize
 
 ### Problem description
 
@@ -64,7 +69,7 @@ Please note that it would have been more efficient to execute all the transforma
 
 Tables were created into BigQuery without any need to partition or cluster data due to the nature of the dataset.
 
-The queries for the table creation were the following:
+The only `DDL statements` for the table creation were the following:
 
 ```
 CREATE TABLE IF NOT EXISTS `data-eng-zoomcamp-cohort24.sleep_health_dataset.stress_sleeping`
@@ -86,6 +91,7 @@ SELECT
 FROM
   `data-eng-zoomcamp-cohort24.sleep_health_dataset.data_table`;
 ```
+
 [Back to Table of Contents](#table-of-contents)
 
 <br>
@@ -112,7 +118,7 @@ We can see that transformation blocks exist in each of the two pipelines created
 
 ### Dashboard
 
-The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GLS link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
+The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be noticed, with only 2 tiles, and these can be seen [in this GLS link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
 
 
 <p align="center">
@@ -360,4 +366,12 @@ Once we have imported these tables into LookerStudio, we will build and adjust a
 
 <br>
 
+### Improvement Notes
+
+If more time had been allotted to design, execute and document this project -and I still had free credits for GCP usage - ,  it would be much preferable to:
+
+- Consume a larger dataset and get deep understanding of the data dictionary and the categories of the dataset
+- After performing EDA, aim to solve more intricate matters and so posing better questions  
+- Have more usage within the Data Warehouse so as to solve this new questions
+- Finally, elaborate a much more complete dashboard, and to my preference, utilize Tableau Public
 
