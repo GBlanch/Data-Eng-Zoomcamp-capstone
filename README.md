@@ -26,7 +26,7 @@ work in progress
 
 ### Foreword
 
-Mainly to the peer reviewer: I tried to structure this markdown so that evaluating could be more accessible if following the evaluation criteria found in [this markdown file](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/projects/README.md) located in the `cohort 2024` directory on the main branch of the DTC-data-engineering default repo.
+Mainly to the peer reviewers: I tried to structure this markdown so that evaluating could be more accessible if following the evaluation criteria found in [this markdown file](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/projects/README.md) located in the `cohort 2024` directory on the main branch of the DTC-data-engineering default repo.
 
 You probably have seen two new sections: this one -`Foreword`- and `Improvement notes`. The former one is self-explanatory I believe. Regarding the latter one, I created it to briefly summarize some of the many aspects and details that I would have liked to do better had I invested more time, energy and resources - I guess this last attribute it's a combination of the first two- on this project.
 
