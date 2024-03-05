@@ -168,7 +168,7 @@ And so our bucket `sleep-health-de-bucket` was created:
 
 <br>
 
-#### </ins>Transformation stage</ins>
+#### <ins>Transformation stage</ins>
 
 Next we are to orchestrate an end-to-end-pipeline from our public repository to Google BigQuery Warehouse. For this, we will use Terraform as IaC to spin up an instance and develop all our blocks there.
 
