@@ -96,7 +96,7 @@ The dashboard was done using Looker Studio, an it was elaborated rather briefly 
 
 We found that amongst the small sample of the population, `Nurses, Teaches, Sales person and Scientist` are the occupations that tend to have some kind of sleeping disorder. 
 
-Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. Having done some EDA prior to executing and documenting this project would have helped notice and tackle this issue.
+Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. If performing an EDA was in the scope of this project, we would have noticed and tackled this issue prior to executing and documenting it.
 
 <br>
 
