@@ -102,7 +102,7 @@ Also it can be noticed that `Nurses, Doctors and Engineers` compose more than th
 
 ### Reproducibility
 
-I tried to provide concise instructions on how I developed and deployed this project. If you're encountering any trouble while reproducing this project, feel free to ping me and tell me about it:
+I tried to provide concise instructions on how I developed and deployed this project. If you're encountering any trouble while reproducing this project, feel free to ping me and tell me about it.
 
 #### Creating GCS Bucket:
 
