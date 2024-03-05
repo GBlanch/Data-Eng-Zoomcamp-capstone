@@ -6,8 +6,8 @@ work in progress
 
 ## Table of Contents
 
-- [DTC-Data-Eng-zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
-  - [Table of Contents](#table-of-contents)
+ [DTC-Data-Eng-zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
+   [Table of Contents](#table-of-contents)
     - [Problem description](#problem-description)
     - [Cloud usage](#cloud-usage)
     - [Data ingestion](#data-ingestion)
