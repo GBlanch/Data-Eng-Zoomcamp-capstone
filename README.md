@@ -86,7 +86,10 @@ SELECT
 FROM
   `data-eng-zoomcamp-cohort24.sleep_health_dataset.data_table`;
 ```
+[Back to Table of Contents](#table-of-contents)
+
 <br>
+
 
 ### Transformations utilizing Mage
 
@@ -103,6 +106,8 @@ We can see that transformation blocks exist in each of the two pipelines created
   - parsing all the letters of the categories as lowercase
   - dropped the category `blood_pressure` which contains 2 two values separated by a slash
 
+[Back to Table of Contents](#table-of-contents)
+
 <br>
 
 ### Dashboard
@@ -117,7 +122,10 @@ We found that amongst the small sample of the population, `Nurses, Teaches, Sale
 
 Also it can be noticed that `Nurses, Doctors and Engineers` compose more than the half of the professions in the dataset. If performing an EDA was in the scope of this project, we would have noticed and tackled this issue prior to executing and documenting it.
 
+[Back to Table of Contents](#table-of-contents)
+
 <br>
+
 
 ### Reproducibility
 
@@ -168,7 +176,10 @@ And so our bucket `sleep-health-de-bucket` was created:
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket-2.png"  width="88%" height="88%">
 
+[Back to Table of Contents](#table-of-contents)
+
 <br>
+
 
 #### Transformation stage
 
@@ -278,6 +289,8 @@ This is a sample of how the GUI of Mage looks like:
         return data
     ```
 
+[Back to Table of Contents](#table-of-contents)
+
 <br>
 
   #### Alternative (local) method proposed: 
@@ -307,7 +320,10 @@ This is a sample of how the GUI of Mage looks like:
 
   Opening our localhost:6789 should take you to the main Mage UI. The rest of the block creation and configuration is the same as the process we have just described in our virtual instance. The main difference would be that the pipelines would be developed and run locally, instead of using a VM.
 
+[Back to Table of Contents](#table-of-contents)
+
 <br>
+
 
 #### Bigquery
 
@@ -340,5 +356,8 @@ FROM
 
 Once we have imported these tables into LookerStudio, we will build and adjust all the dashboard using LookerStudio GUI. The brief result was presented in the section [Dashboard](#dashboard).
 
+[Back to Table of Contents](#table-of-contents)
+
+<br>
 
 
