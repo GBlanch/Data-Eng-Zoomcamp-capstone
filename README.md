@@ -4,7 +4,24 @@ work in progress
 
 <br>
 
-## Main summary  
+## Table of Contents
+
+- [DTC-Data-Eng.-zoomcamp-project](#dtc-data-eng-zoomcamp-project)
+  - [Table of Contents](#table-of-contents)
+    - [Problem description](#problem-description)
+    - [Cloud usage](#cloud-usage)
+    - [Data ingestion](#data-ingestion)
+    - [Data warehouse](#data-warehouse)
+    - [Transformations utilizing Mage](#transformations-utilizing-mage)
+    - [Dashboard](#dashboard)
+    - [Reproducibility](#reproducibility)
+      - [Creating GCS Bucket:](#creating-gcs-bucket)
+      - [Transformation stage](#transformation-stage)
+      - [Alternative (local) method proposed:](#alternative-local-method-proposed)
+      - [Bigquery](#bigquery)
+      - [LookerStudio](#lookerstudio)
+
+
 
 ### Problem description
 
