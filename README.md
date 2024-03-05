@@ -32,7 +32,7 @@ You probably have seen two new sections: this one -`Foreword`- and `Improvement 
 
 ### Problem description
 
-The aim of these project is to analyze a dataset on sleep health and lifestyle compound by a small sample. By doing so, we intend to extract meaningful patterns and correlations so that we can shed some light onto some possible relationship between sleep quality, lifestyle choices, and overall health.
+The aim of these project is to showcase an end-to-end data pipeline execution being deployed in the cloud. We also aim to identify which professions are more prone to have sleeping disorders amongst a very small sample of a dataset on [sleep health and lifestyles](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset?select=Sleep_health_and_lifestyle_dataset.csv).
 
 For that end, the structure of an OLAP approach/system was followed. This is to say: beginning by loading the dataset from a remote repository until rendering of a dashboard for analytic purposes. 
 
@@ -47,9 +47,6 @@ The project has been developed in the cloud using Google Cloud Platform as a sol
 <br>
 
 ### Data ingestion 
-
-
-[Dataset:](https://www.kaggle.com/datasets/uom190346a/sleep-health-and-lifestyle-dataset?select=Sleep_health_and_lifestyle_dataset.csv)
 
 The data ingestion was characterized to be of a batch workflow orchestration with Mage, all developed and deployed using Google Run after initializing and enabling/applying Terraform as IaC.
 
