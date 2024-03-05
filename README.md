@@ -15,7 +15,7 @@ work in progress
     - [Transformations utilizing Mage](#transformations-utilizing-mage)
     - [Dashboard](#dashboard)
     - [Reproducibility](#reproducibility)
-      - [Creating GCS Bucket:](#creating-gcs-bucket)
+      - [Creating GCS Bucket](#creating-gcs-bucket)
       - [Transformation stage](#transformation-stage)
       - [Alternative (local) method proposed:](#alternative-local-method-proposed)
       - [Bigquery](#bigquery)
@@ -129,9 +129,9 @@ Also it can be noticed that `Nurses, Doctors and Engineers` compose more than th
 
 ### Reproducibility
 
-I tried to provide concise instructions on how I developed and deployed this project. If you're encountering any trouble while reproducing this project, feel free to ping me and tell me about it.
+I tried to provide concise instructions on how I developed and deployed this project. If you're encountering any trouble while reproducing these steps, feel free to ping me and ask me about it.
 
-#### Creating GCS Bucket:
+#### Creating GCS Bucket
 
 In 'IAM & Admin' section on GCP, we first create a Service Account. Then we grant permissions / roles to administer BigQuery, Storage and Compute Engine resources with this Service Account.
 
@@ -226,7 +226,7 @@ This is a sample of how the GUI of Mage looks like:
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/mage/mage-load.png"  width="88%" height="88%">
 
-- First transformation (API to GCS bucket batch pipeline)
+- First transformation: `API to GCS bucket` batch pipeline
 
     ```python
     if 'transformer' not in globals():
@@ -269,7 +269,7 @@ This is a sample of how the GUI of Mage looks like:
     ```
 
 
-- Second transformation (GCS bucket to BigQuery batch pipeline):
+- Second transformation: `GCS bucket to BigQuery` batch pipeline
   
     ```python
     if 'transformer' not in globals():
