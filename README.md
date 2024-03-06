@@ -194,7 +194,7 @@ We clone
 
       git clone https://github.com/mage-ai/mage-ai-terraform-templates.git
 
-After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will add our credentials the same way we did when creating our bucket with Terraform. The ones used fot this project are located within [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/terraform)
+After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will validate our credentials the same way we did when creating our bucket with Terraform. The .tf files utilized for this project are located in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/terraform)
 
 We also have to configure and enable Cloud Filestore API
 
@@ -205,12 +205,10 @@ Once all this is done, we are ready to run in our bash terminal:
       terraform apply
 
 
-
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
-When going to Google Run, we see a new service running :
-
+When accessing to Google Run, we see a new service running :
 
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
