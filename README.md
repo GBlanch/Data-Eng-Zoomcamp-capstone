@@ -194,7 +194,7 @@ We clone
 
       git clone https://github.com/mage-ai/mage-ai-terraform-templates.git
 
-After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will add our credentials the same way we did when creating our bucket with Terraform. The ones used fot this project are located within this folder [____]()
+After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will add our credentials the same way we did when creating our bucket with Terraform. The ones used fot this project are located within [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/terraform)
 
 We also have to configure and enable Cloud Filestore API
 
