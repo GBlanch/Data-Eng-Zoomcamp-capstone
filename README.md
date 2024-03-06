@@ -2,11 +2,9 @@
 
 work in progress
 
-<br>
-
 ## Table of Contents
 
-- [DTC-Data-Eng-zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
+- [DTC-Data-Engineering-zoomcamp-capstone](#dtc-data-engineering-zoomcamp-capstone)
   - [Table of Contents](#table-of-contents)
     - [Foreword](#foreword)
     - [Problem description](#problem-description)
@@ -22,6 +20,12 @@ work in progress
       - [Bigquery](#bigquery)
       - [LookerStudio](#lookerstudio)
     - [Improvement Notes](#improvement-notes)
+
+<br>
+
+---
+
+<br>
 
 
 ### Foreword
@@ -196,14 +200,11 @@ We clone
 
 After cd-ing into `gcp` directory, we can open VS Code and adjust the main and variable.tf files. Basically, we will validate our credentials the same way we did when creating our bucket with Terraform. The .tf files utilized for this project are located in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/terraform)
 
-We also have to configure and enable Cloud Filestore API
-
-Once all this is done, we are ready to run in our bash terminal:
+We also have to configure and enable Cloud Filestore API. Once all this is done, we are ready to run in our bash terminal:
 
       terraform init
 
       terraform apply
-
 
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
