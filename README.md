@@ -1,4 +1,4 @@
-# DTC-Data-Engineering-zoomcamp-capstone
+# Data-Eng-Zoomcamp-capstone
 
 work in progress
 
