@@ -213,11 +213,6 @@ And so our bucket `sleep-health-de-bucket` was created:
 
 [Back to Table of Contents](#table-of-contents)
 
-<br>
-
-
-<p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
 
 <br>
 
@@ -243,30 +238,17 @@ We also have to configure and enable Cloud Filestore API. Once all this is done,
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
 
-
-When accessing to Google Run, we see a new service running :
-
-
-
-<p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/terraform/terraform-cloud-run.png"  width="88%" height="88%">
-
 When going to Google Run, we see a new service :
 
 
 <p align="center">
 <img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
 
-<p align="center">
-<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
-
 Before opening the URL of this instance in our local machine, it's safer to whitelist our IP so that we can restrict the access to these service.
 
 <p align="center">
 
 <img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/mage/running-in-vm.png"  width="88%" height="88%">
-
-<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/mage/running-in-vm.png"  width="88%" height="88%">
 
 Now we're ready to build and develop our pipelines in this virtual environment.
 
