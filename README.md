@@ -142,9 +142,6 @@ We can see that transformation blocks exist in each of the two pipelines created
 
 ### Dashboard
 
-<p align="center">
-<img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/2-tile-dashboard.png"  width="88%" height="88%">
-
 The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be noticed, with only 2 tiles, and these can be seen [in this GLS link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
 
 
@@ -207,11 +204,6 @@ There is no auto-confirmation in Terraform when scripting by CLI, so we will nee
 
 <p align="center">
 <img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
-
-And so our bucket `sleep-health-de-bucket` was created:
-
-
-<img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-gcs-bucket.png"  width="88%" height="88%">
 
 And so our bucket `sleep-health-de-bucket` was created:
 
@@ -280,8 +272,6 @@ Now we're ready to build and develop our pipelines in this virtual environment.
 
 As said in the introductory section of this markdown file, for demonstration purposes, you will note that two pipelines have been created to perform different transformations.
 
-
-The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/tree/main/capstone%20project/workflow%20orchestration)
 
 The Python blocks that were used in the two pipelines mentioned in the section []() can be found in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/workflow%20orchestration)
 
