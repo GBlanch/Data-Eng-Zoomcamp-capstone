@@ -13,12 +13,10 @@ work in progress
     - [Data warehouse within BigQuery](#data-warehouse-within-bigquery)
     - [Transformations utilizing Mage](#transformations-utilizing-mage)
     - [Dashboard](#dashboard)
-- [](#)
     - [Reproducibility](#reproducibility)
       - [Creating GCS Bucket](#creating-gcs-bucket)
       - [Transformation stage](#transformation-stage)
       - [Alternative (local) method proposed:](#alternative-local-method-proposed)
-- [](#-1)
       - [Bigquery](#bigquery)
       - [LookerStudio](#lookerstudio)
     - [Improvement Notes](#improvement-notes)
@@ -65,7 +63,6 @@ The data ingestion was characterized to be of a batch workflow orchestration wit
 
 This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/tree/main/capstone%20project/workflow%20orchestration)
 
-This end-to-end ingestion pipeline is compound by two separated batch pipelines with multiple steps/modules. These were created utilizing Mage, and they can be found in [this directory](https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/tree/main/workflow%20orchestration)
 
 The ingestion of the first batch pipeline begun loading the dataset from a raw CSV file hosted on GitHub, and finalized by exporting/staging the dataset into a GCS Bucket. It is important to notice that we technically didn't have to load from any API as we didn't make any GET request to any API endpoint.
 
@@ -145,13 +142,9 @@ We can see that transformation blocks exist in each of the two pipelines created
 
 ### Dashboard
 
-
-The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be told, with just 2 tiles, and these can be seen [in this GCP link]()
-
-
 <p align="center">
 <img src="https://github.com/GBlanch/DTC-Data-Engineering-Zoomcamp/blob/main/capstone%20project/assets/2-tile-dashboard.png"  width="88%" height="88%">
-=======
+
 The dashboard was done using Looker Studio, an it was elaborated rather briefly as it can be noticed, with only 2 tiles, and these can be seen [in this GLS link](https://lookerstudio.google.com/reporting/e643ddeb-cb89-4966-8339-d39f1fa66136)
 
 
@@ -274,7 +267,6 @@ When going to Google Run, we see a new service :
 
 <p align="center">
 <img src="https://github.com/GBlanch/Data-Eng-Zoomcamp-capstone/blob/main/assets/terraform/terraform-cloud-run-1.png"  width="88%" height="88%">
->>>>>>> 878c135f9e893645ad5960f9c0516885f7ccb60f
 
 Before opening the URL of this instance in our local machine, it's safer to whitelist our IP so that we can restrict the access to these service.
 
@@ -395,7 +387,7 @@ This is a sample of how the GUI of Mage looks like:
   Opening our localhost:6789 should take you to the main Mage UI. The rest of the block creation and configuration is the same as the process we have just described in our virtual instance. The main difference would be that the pipelines would be developed and run locally, instead of using a VM.
 
 <br>
-=======
+
 [Back to Table of Contents](#table-of-contents)
 
 <br>
