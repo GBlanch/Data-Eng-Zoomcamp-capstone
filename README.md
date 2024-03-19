@@ -1,6 +1,6 @@
 # DTC-Data-Eng-Zoomcamp-capstone
 
-Work in Progress
+Wip
 
 ## Table of Contents
 
