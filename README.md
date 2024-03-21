@@ -32,6 +32,8 @@ Mainly to the peer reviewers: I tried to structure this markdown so that evaluat
 
 You probably have seen here two new sections: this one -`Foreword`- and `Improvement notes`. The former one is self-explanatory I believe. Regarding the latter one, I created it to briefly summarize some of the many aspects and details that I would have liked to do better had I invested more time, energy and resources - I guess this last attribute it's a combination of the first two- on this project.
 
+And of course, feel free to open a pull request if you see any fix/suggestion (so many more) to be made, thank you!
+
 <br>
 
 
