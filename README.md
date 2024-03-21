@@ -1,7 +1,5 @@
 # DTC-Data-Eng-Zoomcamp-capstone
 
-Wip
-
 ## Table of Contents
 
 - [DTC-Data-Eng-Zoomcamp-capstone](#dtc-data-eng-zoomcamp-capstone)
